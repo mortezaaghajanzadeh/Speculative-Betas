@@ -1,0 +1,158 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+\usecolortheme{whale}
+\usepackage{comment}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{dcolumn}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{dcolumn}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\linespread{1.5}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage[title]{appendix}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{datatool}
+
+%\usepackage{xepersian}
+%\settextfont{XB Zar}
+%\setdigitfont{XB Zar}
+
+
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or %
+April\or May \or June\or July\or August\or September\or October\or November\or %
+December\fi, \number \year} 
+
+
+\AtBeginSection[]
+{
+    \begin{frame}
+        \frametitle{Table of Contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+\title[Speculative Betas]{Speculative Betas\footnote{ \tiny Jornal of Finance - 2016}}
+\subtitle{Harrison Hong \qquad David A.Sraer}
+\author[Aghajanzadeh]{S.M. Aghajanzadeh  }
+\institute[]{Tehran Institute for Advanced Studies }
+\centering
+
+\begin{document}
+
+{\maketitle}
+\small
+
+\begin{frame}{$ \beta $-Sorted Portfolios}
+	\begin{itemize}
+		\item At the beginning of each calendar month, stocks are ranked in ascending order on the basis of their estimated beta at the end of the previous month for prior year
+		\item The ranked stocks are assigned to 1 of 20 value-weighted portfolios
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.9\linewidth]{"../Paper Presentaion/t1"}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Iran $ \beta $-Sorted Portfolios}
+	\begin{itemize}
+	\item At the beginning of each calendar month, stocks are ranked in ascending order on the basis of their estimated beta at the end of the previous month for prior year
+	\item The ranked stocks are assigned to 1 of 10 market-weighted portfolios
+\end{itemize}	
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.9\textwidth}{!}{
+			\input{table1.tex}
+			\label{tab:addlabel}	
+		}
+	\end{table}
+\end{frame}
+\begin{frame}{Beta and Return}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{BetaReturn10.eps}
+		\label{fig:BetaReturn}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}{Beta and Return}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{10portfo.eps}
+		\label{fig:betareturn}
+	\end{figure}
+	
+\end{frame}
+
+
+\begin{frame}{$ \beta $-Sorted Portfolios}
+	\begin{itemize}
+		\item Rank stocks based on preranking ratio of $ \beta $ to $ \sigma^2 $ and define as speculative stocks all stocks with a ratio above  the  median ratio
+		\item Then, within each of these two groups creat 20 $ \beta $-sorted portfolios
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{"../Paper Presentaion/t3}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{$ \beta $-Sorted Portfolios}
+	\begin{itemize}
+		\item Rank stocks based on preranking ratio of $ \beta $ to $ \sigma^2 $ and define as speculative stocks all stocks with a ratio above  the  median ratio
+		\item Then, within each of these two groups creat 10 $ \beta $-sorted portfolios
+	\end{itemize}
+	
+
+			\begin{table}[htbp]
+			\centering
+			\resizebox{0.7\textwidth}{!}{
+				\input{table2.tex}
+				\label{tab:addlabel2}	
+			}
+		\end{table}
+		  
+\end{frame}
+
+\begin{frame}{Speculative /Non Speculative}
+	\begin{columns}
+		\column{0.5\textwidth}
+			\begin{figure}
+			\centering
+			\includegraphics[width=\linewidth]{SpeculativeBetaReturn10.eps}
+			\label{fig:SpeculativeBetaReturn10}
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=\linewidth]{NonSpeculativeBetaReturn10.eps}
+			\label{fig:NonSpeculativeBetaReturn10}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}{Speculative /Non Speculative}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{10Sportfo.eps}
+		\label{fig:speculativebetareturn}
+	\end{figure}
+	
+\end{frame}
+
+
+
+\end{document}
